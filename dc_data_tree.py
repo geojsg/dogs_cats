@@ -10,11 +10,17 @@ import os
 import shutil
 
 # CREATING STRUCTURE
-os.mkdir("valid")
-os.mkdir("train/dogs")
-os.mkdir("train/cats")
-os.mkdir("valid/dogs")
-os.mkdir("valid/cats")
+if not os.path.exists("valid"):
+    os.mkdir("valid")
+    
+if not os.path.exists("train/dogs"):
+    os.mkdir("train/dogs")
+if not os.path.exists("train/cats"):
+    os.mkdir("train/cats")
+if not os.path.exists("valid/dogs"):
+    os.mkdir("valid/dogs")
+if not os.path.exists("valid/cats"):
+    os.mkdir("valid/cats")
 
 
 f_dogs=glob.glob("./train/dog*")
